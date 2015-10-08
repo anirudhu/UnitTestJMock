@@ -23,27 +23,31 @@ import static org.junit.Assert.*;
 import org.junit.Before;
 import org.junit.Test;
 
-public class CourseTest {
+public class CourseTest
+{
 	
 	Course c1;
-
+	
 	@Before
-	public void setUp() throws Exception {
+	public void setUp() throws Exception
+	{
 		c1 = new Course("CS", 443, "Software Quality Assurance and Testing", 3);
 	}
-
+	
 	@Test
-	public void testDepartment() {
+	public void testDepartment()
+	{
 		assertEquals(c1.getDepartment(), "CS");
 		c1.setDepartment("MA");
 		assertEquals(c1.getDepartment(), "MA");
 	}
-
+	
 	@Test
-	public void testNumber() {
+	public void testNumber()
+	{
 		assertEquals(c1.getNumber(), 443);
 		c1.setNumber(448);
 		assertEquals(c1.getNumber(), 448);
 	}
-
+	
 }
