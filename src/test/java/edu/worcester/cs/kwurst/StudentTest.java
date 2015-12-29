@@ -1,14 +1,7 @@
 package edu.worcester.cs.kwurst;
-
+import mockit.*;
+import org.junit.*;
 import static org.junit.Assert.*;
-
-import org.junit.Before;
-import org.junit.Test;
-
-import mockit.Expectations;
-import mockit.FullVerifications;
-import mockit.Mocked;
-
 public class StudentTest
 {
 	@Mocked
@@ -16,9 +9,17 @@ public class StudentTest
 	Student student;
 	
 	@Before
-	public void setUp() throws Exception
+	public void setup() throws Exception
 	{
 	}
+	
+	/**
+	 * testGpa is used to check if
+	 * the correct GPA is returned if
+	 * the grade for the student is an
+	 * A with the assumption that 4.0
+	 * is being returned
+	 */
 	
 	@Test
 	public void testGpa()
@@ -35,6 +36,13 @@ public class StudentTest
 		student = new Student("Sue", "Storm");
 		assertEquals(4.0, student.getGpa(), 0.0);
 	}
+	
+	/**
+	 * testCurrentEarnedCr is used to check if
+	 * the correct number of credits is returned
+	 * with the assumption that the current earned
+	 * credits would be 100 when called
+	 */
 	
 	@Test
 	public void testCurrentEarnedCr()
@@ -53,6 +61,14 @@ public class StudentTest
 		assertEquals(100, student.getCurrentEarnedCr());
 	}
 	
+	/**
+	 * testName is used to check if
+	 * the correct first name is returned
+	 * in this case it would since we are setting
+	 * firstName to Johnny and Sue and immediately
+	 * testing to compare the names 
+	 */
+	
 	@Test
 	public void testName()
 	{
@@ -69,6 +85,5 @@ public class StudentTest
 		assertEquals("Storm", student.getLastName());
 		student.setFirstName("Johnny");
 		assertEquals("Johnny", student.getFirstName());
-	}
-	
+	}	
 }

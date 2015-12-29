@@ -27,12 +27,22 @@ public class CourseTest
 {
 	
 	Course c1;
-	
+	/**
+	 * sets up the c1 Course object
+	 * for the upcoming tests
+	 * @throws Exception
+	 */
 	@Before
-	public void setUp() throws Exception
+	public void setup() throws Exception
 	{
 		c1 = new Course("CS", 443, "Software Quality Assurance and Testing", 3);
 	}
+	
+	/**
+	 * testDepartment checks to see if the
+	 * correct department is returned after
+	 * being assigned
+	 */
 	
 	@Test
 	public void testDepartment()
@@ -42,6 +52,12 @@ public class CourseTest
 		assertEquals(c1.getDepartment(), "MA");
 	}
 	
+	/**
+	 * testNumber validates if the
+	 * correct number is returned
+	 * after setting it
+	 */
+	
 	@Test
 	public void testNumber()
 	{
@@ -49,5 +65,4 @@ public class CourseTest
 		c1.setNumber(448);
 		assertEquals(c1.getNumber(), 448);
 	}
-	
 }

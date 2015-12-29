@@ -29,7 +29,12 @@ public class GradeTest
 	Grade g1;
 	Grade g2;
 	Grade g3;
-	
+	/**
+	 * sets up the grade objects
+	 * g1, g2, g3 before running 
+	 * the tests
+	 * @throws Exception
+	 */
 	@Before
 	public void setUp() throws Exception
 	{
@@ -38,6 +43,14 @@ public class GradeTest
 		g3 = new Grade("A-");
 	}
 	
+	/**
+	 * testGetLetterGrade is used to make sure
+	 * that the correct grade is being returned
+	 * in this case would be true for the first
+	 * statement since g1 is an A but false for
+	 * the second since g1 is not an A-
+	 */
+	
 	@Test
 	public void testGetLetterGrade()
 	{
@@ -45,12 +58,29 @@ public class GradeTest
 		assertNotEquals(g1.getLetterGrade(), "A-");
 	}
 	
+	/**
+	 * testGetNumericGrade is used to check if the
+	 * correct GPA representation of the letter
+	 * grade is returned. For the first statement
+	 * it would return true since an A is a 4.0 and
+	 * the second one would be false since an A- is
+	 * not a 4.0
+	 */
+	
 	@Test
 	public void testGetNumericGrade()
 	{
 		assertEquals(g1.getNumericGrade(), 4.0, 0.0);
 		assertNotEquals(g3.getNumericGrade(), 4.0, 0.0);
 	}
+	
+	/**
+	 * testEquals method is used to determine
+	 * whether or not the grade objects are equal
+	 * Here g1 and g2 are equal since they both have
+	 * the same letter grade but g1 and g3 are not
+	 * since they are different
+	 */
 	
 	@Test
 	public void testEquals()

@@ -9,12 +9,23 @@ public class TranscriptTest
 {
 	
 	Transcript t1;
-	
+	/**
+	 * setup method instantiates the 
+	 * t1 Transcript object to be used
+	 * for the tests
+	 * @throws Exception
+	 */
 	@Before
-	public void setUp() throws Exception
+	public void setup() throws Exception
 	{
 		t1 = new Transcript();
 	}
+	
+	/**
+	 * testGpa is used to check if the correct GPA is returned based
+	 * on the grade that is entered. We test the GPA for grade A, B, and IP
+	 * all these cases return true
+	 */
 	
 	@Test
 	public void testGpa()

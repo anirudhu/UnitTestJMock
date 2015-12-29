@@ -101,6 +101,12 @@ public class Grade
 		return grade;
 	}
 	
+	/**
+	 * Returns the hash code of gradeTable
+	 *
+	 * @return the hash code of gradeTable
+	 */
+	
 	@Override
 	public int hashCode()
 	{
@@ -109,6 +115,14 @@ public class Grade
 		result = prime * result + ((grade == null) ? 0 : grade.hashCode());
 		return result;
 	}
+	
+	/**
+	 * Returns true if obj equals the current grade
+	 * object
+	 *
+	 * @return true if obj equals the current grade
+	 * object
+	 */
 	
 	@Override
 	public boolean equals(Object obj)
